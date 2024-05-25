@@ -1,0 +1,41 @@
+a{
+    text-decoration: none;
+    color: #000;
+}
+.nav__wrapper-elements{
+    margin-top: 25px;
+    display: flex;
+    font-size: 25px;
+}
+
+.nav__ul{
+    display: flex;
+}
+
+.nav__li{
+    margin-right: 40px;
+   
+}
+
+.anime__name{
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.anime__janri{
+    font-size: 18px;
+    color: red;
+    margin-top: 8px;
+}
+
+.anime__type{
+    font-size: 18px;
+    color: rgb(155, 7, 7);
+    margin-top: 3px;
+}
+
+.anime__voices{
+    font-size: 18px;
+    color: rgb(99, 0, 112);
+    margin-top: 3px;
+}

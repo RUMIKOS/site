@@ -1,0 +1,97 @@
+let animesJson = JSON.stringify([
+	{
+		name: 'Записи "Астро"',
+		id: 0,
+		img: 1,
+		janri: ['creepy', 'humor'],
+		year: 2015,
+		voices: ['anilibria'],
+		type: 'on-going',
+		series: [
+			`https://www.youtube.com/watch?v=hlSXcIUXsU8&ab_channel=Komandin®Anton—Web-design%2FUX%2FUI%2FTilda`,
+			`https://www.youtube.com/watch?v=AIa2F0MmylM&t=13s&ab_channel=DOGMA96`,
+			`https://www.youtube.com/watch?v=0HulBzHEyxc&ab_channel=ШЕСТНАДЦАТЬНАДЕВЯТЬ`,
+			`https://www.youtube.com/watch?v=AIa2F0MmylM&t=13s&ab_channel=DOGMA96`,
+		],
+	},
+	{
+		name: 'О моём перерождении в слизь 3',
+		id: 1,
+		img: 1,
+		janri: ['creepy', 'hentai'],
+		year: 2015,
+		voices: ['anilibria', 'anidub'],
+		type: 'on-going',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+	{
+		name: 'Непутёвый ученик в школе магии 3',
+		id: 2,
+		img: 1,
+		janri: ['humor'],
+		year: 1999,
+		voices: ['anilibria', 'anidub'],
+		type: 'on-going',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+	{
+		name: 'Непризнанный школой владыка демонов 2. Часть 2',
+		id: 3,
+		img: 1,
+		janri: ['creepy', 'hentai', 'humor'],
+		year: 1999,
+		voices: ['anidub'],
+		type: 'ended',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+	{
+		name: 'Плач девичьей группы',
+		id: 4,
+		img: 1,
+		janri: ['dramatic'],
+		year: 2012,
+		voices: ['anilibria'],
+		type: 'ended',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+	{
+		name: 'Идолмастер: Блестящие цвета',
+		id: 5,
+		img: 1,
+		janri: ['dramatic', 'humor'],
+		year: 2012,
+		voices: ['anidub'],
+		type: 'ended',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+	{
+		name: 'Моя геройская академия: Воспоминания',
+		id: 6,
+		img: 1,
+		janri: ['dramatic', 'humor'],
+		year: 2012,
+		voices: ['anidub'],
+		type: 'ended',
+		series: [
+			`https://www.youtube.com/watch?v=l52vbSPGUrg&ab_channel=АлександрДудукало`,
+			`https://www.youtube.com/watch?v=graxkD8NzEw`,
+		],
+	},
+])
+
+export default animesJson;

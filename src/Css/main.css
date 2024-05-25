@@ -1,0 +1,19 @@
+.container{
+    margin: 0 100px ;
+}
+
+.genre__li{
+    margin-right: 10px;
+}
+
+.genre__ul{
+    display: flex;
+}
+
+.anime__title{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.anime__title{
+    cursor: pointer;
+}
