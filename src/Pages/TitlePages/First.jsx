@@ -7,23 +7,28 @@ import PageSeries from '../Anime__page/PageSeries'
 import Player from '../FunctionPages/player/Player';
 import FavoriteInPage from './FavoriteInPage';
 import PageSeriesSelect from '../Anime__page/PageSeriesSelect';
+import { useSelector } from 'react-redux';
+import favoriteSlice from '../../store/slice/favorite/favoriteSlice';
 export default function First({anime}) {
-  console.log(anime);
+
+
   const [selectedAnime,setSelectedAnime] = useState(anime.series[0])
-  console.log(selectedAnime);
   return (
 		<div className={anime.name}>
 			<PageTitle name={anime.name} />
 			<PageJanri janri={anime.janri} />
 			<PageType type={anime.type} />
 			<PageVoices voices={anime.voices} />
-			<PageSeries series={anime.series.length}/>
-			<div className="series__slider">{}</div>
+			<PageSeries series={anime.series.length} />
+			<div className='series__slider'>{}</div>
 			<div className='anime__player'>
-				<Player video={selectedAnime}/>
+				<Player video={selectedAnime} />
 			</div>
-			<PageSeriesSelect video={anime.series} setSelectedAnime={setSelectedAnime}/>
-			<FavoriteInPage anime={anime}/>
+			<PageSeriesSelect
+				video={anime.series}
+				setSelectedAnime={setSelectedAnime}
+			/>
+			<FavoriteInPage anime={anime}  />
 		</div>
 	)
 }

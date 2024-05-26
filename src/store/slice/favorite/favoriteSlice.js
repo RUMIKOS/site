@@ -7,13 +7,12 @@ const favoriteSlice = createSlice({
     },
     reducers:{
         addFavorite(state,action){
-            console.log(state,action);
             state.favorite.push({
-                state
+                anime:action.payload
             })
         },
         removeFavorite(state,action){
-
+            state.favorite = state.favorite.filter((el)=>el!==action.payload)
         }
     }
 })
