@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import RemoveFavorite from './RemoveFavorite';
 export default function Favorite() {
  const title = useSelector(state => state.favorite.favorite)
- console.log(title);
   return (
 		<div className='favorite'>
 			<ul className='favorite__ul'>

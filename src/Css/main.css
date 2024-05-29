@@ -17,3 +17,9 @@
 .anime__title{
     cursor: pointer;
 }
+.janri__ul{
+    display: flex;
+}
+.janri__ul li{
+    margin-right: 10px;
+}

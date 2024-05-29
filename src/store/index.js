@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import favoritereducer from "./slice/favorite/favoriteSlice";
+import favoriteReducer from "./slice/favorite/favoriteSlice";
+import categoryReducer from "./slice/categories/categorySlice";
 
 export default configureStore({
     reducer:{
-        favorite:favoritereducer
-    }
+        favorite:favoriteReducer,
+        category:categoryReducer
+    },
+    
 })

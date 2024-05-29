@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import Title from './Title'
 import Janri from './Janri'
 import Type from './Type'
+import Categories from './Categories'
 export default function AnimeList(props) {
   	const anime = props.title
   	// let [selectedAnime,setSelectedAnime] = useState(null)
 	let selectedAnime=null;
   	let clickedAnime = e => {
 		selectedAnime=anime
-		console.log(selectedAnime);
 	}
   	return (
 			<>

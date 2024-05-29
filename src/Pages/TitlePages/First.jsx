@@ -10,8 +10,6 @@ import PageSeriesSelect from '../Anime__page/PageSeriesSelect';
 import { useSelector } from 'react-redux';
 import favoriteSlice from '../../store/slice/favorite/favoriteSlice';
 export default function First({anime}) {
-
-
   const [selectedAnime,setSelectedAnime] = useState(anime.series[0])
   return (
 		<div className={anime.name}>
