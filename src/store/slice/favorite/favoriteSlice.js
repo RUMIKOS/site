@@ -12,10 +12,11 @@ const favoriteSlice = createSlice({
 			})
 		},
 		removeFavorite(state, action) {
-			state.favorite = state.favorite.filter(el => el.anime.id !== action.payload)
+			console.log(action.payload.anime.id);
+			state.favorite = state.favorite.filter(el => el.anime.id !== action.payload.anime.id)
 		},
 	},
 })
 
-export const {addFavorite,removeFavorite} = favoriteSlice.actions
+export const { addFavorite , removeFavorite } = favoriteSlice.actions
 export default favoriteSlice.reducer
