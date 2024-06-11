@@ -1,10 +1,14 @@
 import React from 'react'
-
-export default function Time({
+interface ITime {
+	loadedSeconds:number,
+	playedSeconds:number,
+	handleProgress:(e?:string)=>void
+}
+const Time:React.FC<ITime>=({
 	loadedSeconds,
 	playedSeconds,
 	handleProgress,
-}) {
+}) =>{
 	return (
 		<div className='time'>
 			<input
@@ -18,3 +22,4 @@ export default function Time({
 		</div>
 	)
 }
+export default Time

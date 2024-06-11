@@ -1,3 +1,3 @@
-import animesJson from "../Components/animes";
+import animesJson from "../Components/anim2es";
 
 let url = JSON.parse(animesJson)

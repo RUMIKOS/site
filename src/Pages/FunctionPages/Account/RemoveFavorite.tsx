@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { removeFavorite } from '../../../store/slice/favorite/favoriteSlice'
-export default function RemoveFavorite({anime}) {
+interface IAnimeProps {
+	anime:{id:number}
+}
+export default function RemoveFavorite({anime}:IAnimeProps) {
 	const dispatch = useDispatch()
 	return (
 		<div className='remove'>

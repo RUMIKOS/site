@@ -15,11 +15,13 @@ type FirstProps = {
 		janri:[],
 		type:string,
 		voices:[],
-		series:number[]
+		series:number[],
 	}
 }
 export default function First({anime}:FirstProps) {
-  const [selectedAnime,setSelectedAnime] = useState<number>(anime.series[0])
+  const [selectedAnime,setSelectedAnime] = useState(anime.series[0])
+  console.log(selectedAnime);
+  
   return (
 		<div className={anime.name}>
 			<PageTitle name={anime.name} />
@@ -32,7 +34,7 @@ export default function First({anime}:FirstProps) {
 				<Player video={selectedAnime} />
 			</div>
 			<PageSeriesSelect
-				video={anime.series}
+				video={anime}
 				setSelectedAnime={setSelectedAnime}
 			/>
 			<FavoriteInPage anime={anime}  />

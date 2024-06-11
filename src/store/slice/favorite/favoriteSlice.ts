@@ -1,9 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 type fav ={
-	anime:{}
+	anime:{id?:number,name?:string,img?:string,janri?:string[],series?:string[],type?:string,voices?:string[],year?:string}
 }
-type favoriteState = {
+export type {fav}
+interface favoriteState  {
 	favorite:fav[]
 }
 
@@ -16,14 +17,15 @@ const favoriteSlice = createSlice({
 	initialState,
 	reducers: {
 		addFavorite(state, action:PayloadAction<{}>) {
+			console.log(action.payload);
+			
 			state.favorite.push({
 				anime: action.payload,
 			})
 		},
-		removeFavorite(state, action:PayloadAction) {
-			dasdsa
+		removeFavorite(state, action:PayloadAction<{anime:{id:number}}>) {
 			console.log(action.payload);
-			state.favorite = state.favorite.filter(el => el.anime.id !== action.payload.anime.id)
+			state.favorite = state.favorite .filter(el => el.anime.id !== action.payload.anime.id)
 		},
 	},
 })
