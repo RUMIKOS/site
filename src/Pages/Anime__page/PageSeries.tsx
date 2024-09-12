@@ -1,6 +1,6 @@
 import React from 'react'
 type PageSeriesProps={
-  series:number[]
+  series:string[]
 }
 export default function PageSeries({series}:PageSeriesProps) {
   return (

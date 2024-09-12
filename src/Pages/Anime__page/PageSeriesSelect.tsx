@@ -1,14 +1,13 @@
 import React from 'react'
 import VideoNumber from './VideoNumber'
 type PageSeriesSelectProps = {
-	video: {series:[]},
+	video: {series:string[]},
 	setSelectedAnime:(i:string|undefined)=>void
 }
 export default function PageSeriesSelect({ video, setSelectedAnime }:PageSeriesSelectProps) {
 	const choiseAnime = (e:React.ChangeEvent<HTMLDataElement>) => {
 		setSelectedAnime(e.target.dataset.url)
 	}
-	console.log(video.series);
 	
 	return (
 		<div className='series__select'>

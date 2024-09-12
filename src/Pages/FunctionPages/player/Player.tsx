@@ -4,7 +4,7 @@ import PlayerContorls from './PlayerContorls'
 import PlayerVolume from './PlayerVolume'
 import Time from './Time'
 interface PlayerProps  {
-  video:number
+  video:string[]|undefined
 }
 export default function Player({video}:PlayerProps) {
   const [playingState,setPlaying] = useState<{playing:boolean}>({playing:false})

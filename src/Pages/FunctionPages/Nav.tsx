@@ -1,15 +1,10 @@
 import { Link, Outlet } from 'react-router-dom'
-import {React, useEffect, useState } from 'react'
-import nav from '../../Css/Nav.css'
-import Acc from './Account/Acc'
-import { useSelector } from 'react-redux'
-import Favorite from './Account/Favorite'
+import React,{ useState } from 'react'
 export default function Nav() {
 	const logIn = localStorage.getItem('isLoggedIn')
-	const user = localStorage.getItem('user')
 	const pagesIndex = [1, 2, 3, 4 , 5 , 6]
-	let [randomIndexPage, setRandomIndexPage] = useState(null)
-	function randompage(e) {
+	let [randomIndexPage, setRandomIndexPage] = useState('')
+	function randompage() {
 		setRandomIndexPage(
 			(randomIndexPage = String(Math.floor(Math.random() * pagesIndex.length)))
 		)
@@ -25,9 +20,6 @@ export default function Nav() {
 
 						<li className='nav__li'>
 							{logIn==='false'?<Link to='acc'>Логин или Регистарция</Link>:<Link to='account'>Ваш профиль</Link>}
-							{/* <Link to='acc'>
-								{logIn==="false"?`Регистарция или авторизация`:user}
-							</Link> */}
 						</li>
 					</ul>
 					<div className='random__anime' onClick={randompage}>

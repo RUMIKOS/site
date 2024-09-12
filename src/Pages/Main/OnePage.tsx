@@ -1,22 +1,16 @@
 import React,{ useState,  useEffect } from 'react'
 import AnimeList from './AnimeList'
-import { json, useNavigate } from 'react-router-dom';
 import Categories from './Categories'
-import { useDispatch, useSelector } from 'react-redux';
 import Search from '../FunctionPages/Search/Search';
-import axios from 'axios';
-import QueryString from 'qs';
-import { RootState } from '../../store';
 import { fetchAnimes } from '../../store/slice/animesSlice';
+import { useAppDispatch, useAppSelector } from '../../types/hooks';
 export default function OnePage() {
-	const navigate = useNavigate()
-	const dispatch = useDispatch()
-	const state2 = useSelector(state=>state.anime.anime)
-	const [animeState,setAnimeState]=useState([])
-	const categoryId = useSelector<RootState>(
+	const dispatch = useAppDispatch()
+	const state2 = useAppSelector(state=>state.anime.anime)
+	const categoryId = useAppSelector(
 		state => state.category.category[0]
 	)
-	const searchState = useSelector<RootState>(
+	const searchState = useAppSelector(
 		state=>state.search.search
 		
 	)
@@ -28,7 +22,7 @@ export default function OnePage() {
 	useEffect(() => {
 		const categoryParametr = categoryId ? `janri=${categoryId}` : ''
 		const searchParametr = searchState ? `&search=${searchState}` : ''
-		let lox = dispatch(fetchAnimes({ categoryParametr, searchParametr }))
+		dispatch(fetchAnimes({ categoryParametr, searchParametr }))
 	}, [categoryId, searchState])
 	return (
 		<div className='main__Wrapper'>

@@ -1,11 +1,11 @@
 import React from 'react'
 import { addCategory } from '../../store/slice/categories/categorySlice'
-import { useDispatch } from 'react-redux'
+import { useAppDispatch } from '../../types/hooks'
 type CategoryProps = {
-	category:[]
+	category:string
 }
 export default function Category({ category }:CategoryProps) {
-	const dispatch = useDispatch()
+	const dispatch = useAppDispatch()
 	const addCat = () => dispatch(addCategory(category))
 	return <li onClick={()=>addCat()}>{category}</li>
 }

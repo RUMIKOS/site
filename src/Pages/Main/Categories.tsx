@@ -1,19 +1,18 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import { addCategory } from '../../store/slice/categories/categorySlice'
+import { useAppDispatch } from '../../types/hooks'
 export default function Categories() {
+  const dispatch = useAppDispatch()
   const catergories: string[] = [
 		'creepy',
 		'hentai',
 		'humor',
 		'dramatic',
 	]
-  const dispatch = useDispatch()
-  const addCat = ()=>dispatch(addCategory())
   return (
     <div className='categories'>
       <ul>
-        {catergories.map((el,i)=><li key={i} onClick={()=>addCategory((el))}>{el}</li>)}
+        {catergories.map((el,i)=><li key={i} onClick={()=>dispatch(addCategory((el)))}>{el}</li>)}
       </ul>
     </div>
   )

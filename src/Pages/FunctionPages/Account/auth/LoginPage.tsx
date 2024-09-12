@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../../Components/firebase'
 import { useDispatch } from 'react-redux'
-import { checkUser } from '../../../store/slice/auth/authSlice'
+import { checkUser } from '../../../../store/slice/auth/authSlice'
+import { useAppDispatch } from '../../../../types/hooks'
 export const LoginPage = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
-	function login(e) {
+	const [isLoggedIn,setIsLoggedIn] = useState(true)
+	function login(e:any) {
 		e.preventDefault() 
 			try{
-        dispatch(checkUser({email,password}))
+        dispatch(checkUser({email,password,isLoggedIn}))
 				setEmail('')
 				setPassword('')
         setError('')
@@ -21,6 +21,7 @@ export const LoginPage = () => {
         console.log(e)
       }
 	}
+
 	return (
 		<div className='register'>
 			<form>

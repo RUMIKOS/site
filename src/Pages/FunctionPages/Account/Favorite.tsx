@@ -1,11 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import RemoveFavorite from './RemoveFavorite';
-type title ={
-	title:unknown;
-}
+import { useAppSelector } from '../../../types/hooks';
 const Favorite:React.FC =()=> {
- const title:unknown = useSelector(state => state.favorite.favorite)
+ const title:unknown = useAppSelector(state => state.favorite.favorite)
  if (Array.isArray(title)) {
 	return (
 		<div className='favorite'>

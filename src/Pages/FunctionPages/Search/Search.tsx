@@ -1,10 +1,9 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { addSearch } from '../../../store/slice/search/searchSlice'
-import { RootState } from '../../../store'
+import { useAppDispatch, useAppSelector } from '../../../types/hooks'
 export default function Search() {
-	const dispatch = useDispatch()
-	const searchValue = useSelector<RootState>(state=>state.search.search)
+	const dispatch = useAppDispatch()
+	const searchValue = useAppSelector(state=>state.search.search)
 	if (typeof searchValue === 'string') {
 		return (
 			<div>

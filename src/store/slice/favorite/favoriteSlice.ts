@@ -25,7 +25,7 @@ const favoriteSlice = createSlice({
 		},
 		removeFavorite(state, action:PayloadAction<{anime:{id:number}}>) {
 			console.log(action.payload);
-			state.favorite = state.favorite .filter(el => el.anime.id !== action.payload.anime.id)
+			state.favorite = state.favorite.filter(el => el.anime.id !== action.payload.anime.id)
 		},
 	},
 })

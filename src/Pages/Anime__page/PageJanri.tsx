@@ -1,7 +1,7 @@
 import React from 'react'
 import Category from './Category'
 type PageJanriProps = {
-  janri:[]
+  janri:string[]
 }
 export default function PageJanri({janri}:PageJanriProps) {
   return (

@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../../Components/firebase'
-import { useDispatch } from 'react-redux'
-import { addUser } from '../../../store/slice/auth/authSlice'
+import { addUser } from '../../../../store/slice/auth/authSlice'
+import { useAppDispatch } from '../../../../types/hooks'
 export const RegisterPage = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const [email,setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordRepeat, setPasswordRepeat] = useState('')
